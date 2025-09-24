@@ -1,0 +1,13 @@
+# Save seasons in a tuple
+seasons = ("Winter", "Spring", "Summer", "Autumn")
+
+# Ask user for a month number
+month = int(input("Enter the number of a month (1-12): "))
+
+if 1 <= month <= 12:
+    # Shift December (12) to index 0 for winter
+    season_index = ((month % 12) // 3)  
+    season = seasons[season_index]
+    print("The season is:", season)
+else:
+    print("Invalid month number")
